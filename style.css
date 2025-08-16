@@ -1,0 +1,91 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f7f4;
+    color: #4a4a4a;
+}
+.nav-link {
+    color: #4a4a4a;
+    transition: color 0.3s;
+    padding-bottom: 4px;
+}
+.nav-link:hover {
+    color: #a0522d;
+}
+.nav-link.active {
+    color: #a0522d;
+    font-weight: 600;
+    border-bottom: 2px solid #a0522d;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45vh;
+    max-height: 450px;
+}
+.icon-bg {
+    background-color: rgba(160, 82, 45, 0.1);
+    color: #8b4513;
+}
+.slide-container {
+    min-height: calc(100vh - 92px); /* Subtrai a altura do header + progress bar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #374151;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary.active {
+     background-color: #a0522d;
+     color: white;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: #e5e7eb;
+    height: 8px;
+}
+.progress-bar {
+    background-color: #a0522d;
+    height: 8px;
+    transition: width 0.5s ease-in-out;
+}
+code {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+pre code {
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+    border-radius: 0.5rem;
+}
+.footnote {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.5rem;
+}

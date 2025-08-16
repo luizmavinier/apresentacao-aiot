@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 9: Desafios - AIoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="home-btn" class="text-xl font-bold text-[#8b4513] flex items-center">Índice <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="home-menu" class="hidden absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50">
+                        <a href="slide1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">1. Capa</a>
+                        <a href="slide2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">2. Roteiro</a>
+                        <a href="slide3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">3. A Era dos Dados</a>
+                        <a href="slide4.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">4. Pilar 1: IoT</a>
+                        <a href="slide5.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">5. Pilar 2: IA</a>
+                        <a href="slide6.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">6. Sinergia AIoT</a>
+                        <a href="slide7.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">7. Arquiteturas</a>
+                        <a href="slide8.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">8. Aplicações</a>
+                        <a href="slide9.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">9. Desafios</a>
+                        <a href="slide10.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">10. Futuro</a>
+                        <a href="slide11.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">11. Conclusão</a>
+                        <a href="slide12.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">12. Referências</a>
+                        <a href="slide13.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">13. Fim</a>
+                    </div>
+                </div>
+                <a href="slide2.html" class="text-gray-600 hover:text-[#a0522d] font-semibold">Roteiro</a>
+            </div>
+            <div class="text-sm text-gray-500 font-semibold">Slide 9 de 13</div>
+            <div class="flex items-center space-x-4">
+                <a href="slide8.html" class="text-gray-600 hover:text-[#a0522d]">← Anterior</a>
+                <a href="slide10.html" class="text-gray-600 hover:text-[#a0522d]">Próximo →</a>
+            </div>
+        </nav>
+        <div class="progress-bar-container"><div class="progress-bar" style="width: 69.21%;"></div></div>
+    </header>
+    <main class="container mx-auto px-6">
+        <div class="slide-container">
+            <div class="w-full max-w-4xl">
+                <h1 class="text-3xl font-bold text-center mb-12">Desafios e Considerações Éticas</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-center">Desafios Técnicos</h3>
+                        <div id="tech-challenges" class="space-y-2"></div>
+                    </div>
+                    <div>
+                         <h3 class="text-xl font-semibold mb-4 text-center">Desafios Éticos e Sociais</h3>
+                         <div id="ethical-challenges" class="space-y-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('home-btn').addEventListener('click', () => {
+            document.getElementById('home-menu').classList.toggle('hidden');
+        });
+        const challenges = {
+            tech: [
+                { icon: '🔒', title: 'Segurança', content: 'Proteção contra ataques adversariais, envenenamento de dados (data poisoning) e botnets de IoT.' },
+                { icon: '⚙️', title: 'Otimização de Modelos', content: 'Técnicas como quantização e pruning para adequar modelos de IA a hardware com recursos limitados (TinyML).' },
+                { icon: '🔄', title: 'Gerenciamento (MLOps)', content: 'Como realizar o deploy, monitoramento e atualização de milhares de modelos de IA distribuídos na borda?' }
+            ],
+            ethical: [
+                { icon: '🛡️', title: 'Privacidade por Design', content: 'Implementação de técnicas como Aprendizagem Federada e Criptografia Homomórfica para proteger dados sensíveis.' },
+                { icon: '⚖️', title: 'Viés e Justiça (Fairness)', content: 'Garantir que os dados de treinamento sejam representativos para evitar decisões algorítmicas discriminatórias.' },
+                { icon: '❓', title: 'Explicabilidade (XAI)', content: 'Como auditar e entender as decisões de sistemas autônomos, especialmente em domínios críticos como saúde e transporte?' }
+            ]
+        };
+        function createAccordion(container, items) {
+            items.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'bg-white rounded-lg';
+                div.innerHTML = `
+                    <button class="accordion-toggle w-full text-left p-4 flex justify-between items-center font-semibold">
+                        <span class="flex items-center"><span class="text-xl mr-3">${item.icon}</span>${item.title}</span>
+                        <span class="font-bold text-xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="accordion-content px-4 text-sm text-gray-600">
+                        <p class="pb-4">${item.content}</p>
+                    </div>`;
+                container.appendChild(div);
+            });
+        }
+        createAccordion(document.getElementById('tech-challenges'), challenges.tech);
+        createAccordion(document.getElementById('ethical-challenges'), challenges.ethical);
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('span:last-child');
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    icon.classList.remove('rotate-45');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.classList.add('rotate-45');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

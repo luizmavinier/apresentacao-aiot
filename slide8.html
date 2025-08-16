@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide 8: Aplicações - AIoT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="relative">
+                    <button id="home-btn" class="text-xl font-bold text-[#8b4513] flex items-center">Índice <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
+                    <div id="home-menu" class="hidden absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50">
+                        <a href="slide1.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">1. Capa</a>
+                        <a href="slide2.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">2. Roteiro</a>
+                        <a href="slide3.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">3. A Era dos Dados</a>
+                        <a href="slide4.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">4. Pilar 1: IoT</a>
+                        <a href="slide5.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">5. Pilar 2: IA</a>
+                        <a href="slide6.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">6. Sinergia AIoT</a>
+                        <a href="slide7.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">7. Arquiteturas</a>
+                        <a href="slide8.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">8. Aplicações</a>
+                        <a href="slide9.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">9. Desafios</a>
+                        <a href="slide10.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">10. Futuro</a>
+                        <a href="slide11.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">11. Conclusão</a>
+                        <a href="slide12.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">12. Referências</a>
+                        <a href="slide13.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">13. Fim</a>
+                    </div>
+                </div>
+                <a href="slide2.html" class="text-gray-600 hover:text-[#a0522d] font-semibold">Roteiro</a>
+            </div>
+            <div class="text-sm text-gray-500 font-semibold">Slide 8 de 13</div>
+            <div class="flex items-center space-x-4">
+                <a href="slide7.html" class="text-gray-600 hover:text-[#a0522d]">← Anterior</a>
+                <a href="slide9.html" class="text-gray-600 hover:text-[#a0522d]">Próximo →</a>
+            </div>
+        </nav>
+        <div class="progress-bar-container"><div class="progress-bar" style="width: 61.52%;"></div></div>
+    </header>
+    <main class="container mx-auto px-6 py-12">
+        <div class="w-full max-w-6xl mx-auto">
+            <h1 class="text-3xl font-bold text-center mb-4">Aplicações no Mundo Real</h1>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">A AIoT está remodelando indústrias. Filtre para explorar como algoritmos específicos são aplicados em diferentes domínios.</p>
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="app-filter-btn btn-secondary px-4 py-2 rounded-md text-sm active" data-filter="all">Todos</button>
+                <button class="app-filter-btn btn-secondary px-4 py-2 rounded-md text-sm" data-filter="manufatura">Manufatura</button>
+                <button class="app-filter-btn btn-secondary px-4 py-2 rounded-md text-sm" data-filter="cidades">Cidades Inteligentes</button>
+                <button class="app-filter-btn btn-secondary px-4 py-2 rounded-md text-sm" data-filter="saude">Saúde</button>
+                <button class="app-filter-btn btn-secondary px-4 py-2 rounded-md text-sm" data-filter="agro">Agronegócio</button>
+            </div>
+            <div id="app-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"></div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('home-btn').addEventListener('click', () => {
+            document.getElementById('home-menu').classList.toggle('hidden');
+        });
+        const applications = [
+            { category: 'manufatura', icon: '🏭', title: 'Manutenção Preditiva', problem: 'Prever falhas em motores industriais.', model: 'Autoencoders ou LSTMs para detecção de anomalias.', arch: 'Inferência na borda; re-treinamento na nuvem.' },
+            { category: 'cidades', icon: '🏙️', title: 'Otimização de Tráfego', problem: 'Reduzir congestionamentos em tempo real.', model: 'CNNs (YOLO, SSD) para detecção de veículos.', arch: 'Processamento na borda em gateways.' },
+            { category: 'saude', icon: '❤️', title: 'Detecção de Arritmia', problem: 'Detectar arritmia cardíaca em pacientes remotos.', model: '1D-CNN ou LSTM para classificação de sinais de ECG.', arch: 'Inferência no wearable; sincronização com a nuvem.' },
+            { category: 'agro', icon: '🌾', title: 'Detecção de Estresse Hídrico', problem: 'Otimizar o uso de água em plantações.', model: 'U-Net para segmentação de imagens de drones.', arch: 'Processamento de imagens na nuvem.' },
+        ];
+        const appGrid = document.getElementById('app-grid');
+        const appFilterBtns = document.querySelectorAll('.app-filter-btn');
+        function renderApplications(filter = 'all') {
+            appGrid.innerHTML = '';
+            const filteredApps = filter === 'all' ? applications : applications.filter(app => app.category === filter);
+            filteredApps.forEach(app => {
+                const card = document.createElement('div');
+                card.className = 'card p-6 flex flex-col';
+                card.innerHTML = `<div class="text-4xl mb-4">${app.icon}</div>
+                    <h3 class="text-xl font-semibold mb-2">${app.title}</h3>
+                    <p class="text-sm text-gray-500 mb-2"><strong>Problema:</strong> ${app.problem}</p>
+                    <div class="mt-auto pt-4">
+                        <p class="text-xs bg-gray-100 text-gray-700 rounded-full px-3 py-1 inline-block"><strong>Modelo IA:</strong> ${app.model}</p>
+                        <p class="text-xs bg-blue-100 text-blue-800 rounded-full px-3 py-1 inline-block mt-2"><strong>Arquitetura:</strong> ${app.arch}</p>
+                    </div>`;
+                appGrid.appendChild(card);
+            });
+        }
+        appFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                renderApplications(filter);
+                appFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+        renderApplications('all');
+    </script>
+</body>
+</html>
